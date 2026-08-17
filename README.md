@@ -28,7 +28,7 @@ This repository hosts a developer blog built with Docusaurus. It includes tools 
 - [Docker](https://www.docker.com/products/docker-desktop) (only required if [deploying using NGINX](#deploying-using-nginx))
 
 1. Installation
-
+To install all dependencies that defined in package.json/ pnpm-lock.yaml, we need for our project to use this command:
    ```
    $ pnpm install
    ```
