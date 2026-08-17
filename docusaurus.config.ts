@@ -18,7 +18,7 @@ const config: Config = {
   //"https://spmse.github.io" ,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.BASE_URL ?? "MY-DSO-BLOG"
+  baseUrl: process.env.BASE_URL ?? "MY-DSO-BLOG",
   // "/",
 
   // GitHub pages deployment config.
@@ -48,7 +48,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/spmse/dev-blog-template',
+            'https://github.com/Erikogeek/MY-DSO-BLOG.git',
         },
         blog: blogEnabled ?
           {
@@ -60,7 +60,7 @@ const config: Config = {
             // Please change this to your repo.
             // Remove this to remove the "edit this page" links.
             editUrl:
-              'https://github.com/spmse/dev-blog-template',
+              'https://github.com/Erikogeek/MY-DSO-BLOG.git',
             // Useful options to enforce blogging best practices
             onInlineTags: 'warn',
             onInlineAuthors: 'warn',
