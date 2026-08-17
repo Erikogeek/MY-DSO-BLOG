@@ -167,6 +167,6 @@ if (blogEnabled) {
     to: '/blog',
     label: 'Blog',
   });
-}
+} // test of Pullrequest.
 
 export default config;
