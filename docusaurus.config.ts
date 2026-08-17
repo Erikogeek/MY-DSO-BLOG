@@ -23,7 +23,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: process.env.GITHUB_ORG, // Usually your GitHub org/user name.
+  organizationName: process.env.Erikogeek, //GITHUB_ORG, // Usually your GitHub org/user name.
   projectName: process.env.GITHUB_PROJECT, // Usually your repo name.
 
   deploymentBranch: process.env.DEPLOYMENT_BRANCH,
@@ -91,7 +91,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/spmse/dev-blog-template',
+          href: 'https://github.com/Erikogeek/MY-DSO-BLOG.git',
           label: 'Github',
           position: 'right',
         },
@@ -110,11 +110,11 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
+          title: 'Projects',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'MY-DSO-BLOG',
+              href: 'https://github.com/Erikogeek/MY-DSO-BLOG.git',
             },
             {
               label: 'Discord',
@@ -131,13 +131,19 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/Erikogeek/MY-DSO-BLOG.git',
+            },
+            { label:'template',
+              href: 'https://github.com/Erikogeek/MY-DSO-BLOG.git' ,
+
             }
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Sven Patrick Meier (spmse). Built with Docusaurus and 💚.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Eric Fouedjio (Erikogeek). Built with Docusaurus and 💚.`,
+      //copyright: `Copyright © ${new Date().getFullYear()} Developer Akademie (Developer-Akademie-DevSecOpsKurs). Built with Docusaurus and 💚.`,
     },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
@@ -167,6 +173,6 @@ if (blogEnabled) {
     to: '/blog',
     label: 'Blog',
   });
-} // test of Pullrequest.
+} // test of Pullrequest.g
 
 export default config;
