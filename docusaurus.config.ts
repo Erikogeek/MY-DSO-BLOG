@@ -117,14 +117,14 @@ const config: Config = {
               label: 'MY-DSO-BLOG',
               href: 'https://github.com/Erikogeek/MY-DSO-BLOG.git',
             },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
+            //{
+             // label: 'Discord',
+              //href: 'https://discordapp.com/invite/docusaurus',
+            //},
+            //{
+              //label: 'Twitter',
+              //href: 'https://twitter.com/docusaurus',
+            //},
           ],
         },
         {
@@ -142,7 +142,8 @@ const config: Config = {
           
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Eric Fouedjio (Erikogeek). Built with Docusaurus and 💚.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Eric Fouedjio (Erikogeek). extended from the developer-akademie-starter”
+.`,
       //copyright: `Copyright © ${new Date().getFullYear()} Developer Akademie (Developer-Akademie-DevSecOpsKurs). Built with Docusaurus and 💚.`,
     },
 
