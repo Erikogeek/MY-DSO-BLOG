@@ -139,6 +139,7 @@ const config: Config = {
 
             }
           ],
+          
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Eric Fouedjio (Erikogeek). Built with Docusaurus and 💚.`,
