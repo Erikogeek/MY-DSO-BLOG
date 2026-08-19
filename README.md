@@ -5,59 +5,94 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 ## Repository Description
 
 This repository hosts a developer blog built with Docusaurus. It includes tools and scripts for creating, managing, and deploying static web content. The software supports rapid local development, customizable theming, and seamless deployment to platforms like GitHub Pages or NGINX.
+## Steps of my Developper Blog
+The project paket came from Developer Akademie and I copied it in my own repository named MY-DSO-BLOG.
 
-## Table of Contents
-
-- [My Developer Blog](#my-developer-blog)
-  - [Repository Description](#repository-description)
-  - [Table of Contents](#table-of-contents)
-  - [Quickstart](#quickstart)
-    - [Prerequisites](#prerequisites)
-  - [Repository Structure](#repository-structure)
-  - [Deployment](#deployment)
-    - [Deploy to Github Pages](#deploy-to-github-pages)
-    - [Deploying using NGINX](#deploying-using-nginx)
-    - [Contributing](#contributing)
-
-## Quickstart
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v16 or later recommended)
-- [pnpm](https://pnpm.io/) (package manager for faster and more efficient dependency handling)
-- [Docker](https://www.docker.com/products/docker-desktop) (only required if [deploying using NGINX](#deploying-using-nginx))
-
-1. Installation
-
+1- clone my repository with my local computer. To do this, I need to creat a SSH-key using this command:
+  ```
+ ssh-keygen -t ed25519 -C "user_email_adresse"
    ```
-   $ pnpm install
+- t describe the typ of Key
+- ed25519 is a modern, secure and compact SSH-Key-typ
+- C add to your key your email.
+
+2- to check if the creating of SSH-Key was succes, Enter file in which to save the key
    ```
+  $ C:\Users\username\.ssh\id_ed25519
+    ```
+you will find two files:
+id_ed25519 ---> private Key
+id_ed25519.pub --> Public-Key
+It is more important to note that you never give your private-key. The public-key will be used for server or Github.
+To show your public-Key, enter this command:
+```
+§ cat C: /user/username/.ssh/id_ed25519.pub
 
-2. Local Development
+```
+After this, the public-key can be set in Github. this will be save by SSH-Key in Github.
 
-   ```
-   $ pnpm start
-   ```
+3- The project can be save from Github to the local computer and cloned with following command:
+```
+$ git clone git@github.com:Erikogeek/MY-DSO-BLOG.git
+```
+your keep the same folder name.
+Open now your Visual studio Code and open the project folder.
+With the command
+````
+§ code .
+```
+you can start the project.
+##Creating of feature branch from main branch in Github named Setup-Blog.
+ the first thing to do hier is to check in which branch your are.
+ ```
+ $ git branch
+ ```
+You will see something like :*main. this * shows that you are in actual branch.
+Now you need to logout in the main branch and create the feature branch Setup_blog and stay there.
+```
+$ git checkout -b feature/Setup-Blog
+```
+Now is the feature branch created.
+## Feature branch to Github load
+```
+$ git push -u origin feature/Setup-blog
+```
+The Github sees like this:
+GitHub
+├── main
+└── feature/Setup-Blog
+## Excetution of Modifications
+In the visual studio code we can adapt modifications in our blog
+After modification in our feature branch we use:
+```
+$ git status
+```
+to see all files our project that were modificated.
+To execut the Modification in our local device we enter the following command:
+```
+$ git add <filename>
+```
+and then
+```
+$git commit -m "hier message of modifications"
 
-   This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+```
+Nun we enter 
+```
+$ git push
+```
+to push the modifications in Github.
+## creation of Pull-request
+Pull request is a demande on the Teams for checking. 
+It connects the main branch and the feature branch.
+After execution modifications we can use the button "Compare & Pull request" to create a new Pull request.
+this means saving the modification from feature branch in main. Adding the description of request and clic of creation
 
-3. Build
 
-   ```
-   $ pnpm build
-   ```
 
-   This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-4. Deployment
-
-   In order to deploy onto Github Pages, ensure that your `docusaurus.config.ts` conforms with the [documentation guidelines](https://docusaurus.io/docs/deployment#deploying-to-github-pages). After that is ensured run the following command to deploy:
-
-   ```
-   $ USE_SSH=true pnpm deploy
-   ```
-
-For detailed information about deploying this Docusaurus project, refer to the [Deployment](#deployment) section below.
+```
+ssh-keygen -t ed25519 -C "github-v-server"
 
 ## Repository Structure
 
@@ -97,9 +132,3 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 ### Deploying using NGINX
 
 To deploy the site using NGINX and Docker, follow this [guide](./docs/guides/deploy-docusaurus-with-docker-and-nginx.md)
-
-### Contributing
-
-Currently, this project does not seek collaborators, but we're open to suggestions regarding enhancements or guides to prepare.
-Open an issue with a detailed description on the change you suggest and elaborate why it's benefitial for the project and vast majority.
-If accepted in the discussion, open a pull request from your fork of this repository to contribute your changes.
