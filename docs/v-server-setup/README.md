@@ -5,7 +5,7 @@ This guide documents the initial setup of an Ubuntu virtual machine which we use
 
 ## Table of Contents
 
-- [1. Creating of SSH Key on the Client](#1-create-a-dedicated-ssh-key-on-the-client)
+- [1. Creating of SSH Key on the Client](#1-Creating-of-SSH-Key-on-the-Client)
 - [2. Deposit and Test the Public Key](#2-install-and-test-the-public-key)
 - [3. Disable Password-Based SSH Authentication](#3-disable-password-based-ssh-authentication)
 - [4. Install Nginx](#4-install-nginx)
