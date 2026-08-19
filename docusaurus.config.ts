@@ -1,7 +1,7 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
-import {config as dotenvconfig}  from "dotenv";
+import { config as dotenvconfig } from "dotenv";
 
 dotenvconfig();
 
@@ -9,19 +9,22 @@ dotenvconfig();
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 
 const config: Config = {
-  title: 'DSO Live Demo Docs',
-  tagline: 'Dinosaurs are cool',
+  title: 'DSO For MY-DSO-BLOG',
+  tagline: 'ERIKO-DevSecOps Enthusiast wiht a passion for Details and enfficiency',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: process.env.DEPLOYMENT_URL ?? "https://spmse.github.io",
+  url: process.env.DEPLOYMENT_URL ?? "https://erikogeek.github.io" ,
+  // "https://github.com/Erikogeek/MY-DSO-BLOG.git",
+  //"https://spmse.github.io" 
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.BASE_URL ?? "/",
+  baseUrl: process.env.BASE_URL ?? "MY-DSO-BLOG",
+  // "/", //
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: process.env.GITHUB_ORG, // Usually your GitHub org/user name.
+  organizationName: process.env.Erikogeek, //GITHUB_ORG, // Usually your GitHub org/user name.
   projectName: process.env.GITHUB_PROJECT, // Usually your repo name.
 
   deploymentBranch: process.env.DEPLOYMENT_BRANCH,
@@ -46,9 +49,9 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/spmse/dev-blog-template',
+            'https://github.com/Erikogeek/MY-DSO-BLOG.git',
         },
-        blog: blogEnabled ? 
+        blog: blogEnabled ?
           {
             showReadingTime: true,
             feedOptions: {
@@ -58,7 +61,7 @@ const config: Config = {
             // Please change this to your repo.
             // Remove this to remove the "edit this page" links.
             editUrl:
-              'https://github.com/spmse/dev-blog-template',
+              'https://github.com/Erikogeek/MY-DSO-BLOG.git',
             // Useful options to enforce blogging best practices
             onInlineTags: 'warn',
             onInlineAuthors: 'warn',
@@ -89,7 +92,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/spmse/dev-blog-template',
+          href: 'https://github.com/Erikogeek/MY-DSO-BLOG.git',
           label: 'Github',
           position: 'right',
         },
@@ -108,20 +111,20 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
+          title: 'Projects',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'MY-DSO-BLOG',
+              href: 'https://github.com/Erikogeek/MY-DSO-BLOG.git',
             },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
+            //{
+             // label: 'Discord',
+              //href: 'https://discordapp.com/invite/docusaurus',
+            //},
+            //{
+              //label: 'Twitter',
+              //href: 'https://twitter.com/docusaurus',
+            //},
           ],
         },
         {
@@ -129,13 +132,21 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/Erikogeek/MY-DSO-BLOG.git',
+            },
+            { label:'template',
+              href: 'https://github.com/Erikogeek/MY-DSO-BLOG.git' ,
+
             }
           ],
+          
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Sven Patrick Meier (spmse). Built with Docusaurus and 💚.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Eric Fouedjio (Erikogeek). extended from the developer-akademie-starter”
+.`,
+      //copyright: `Copyright © ${new Date().getFullYear()} Developer Akademie (Developer-Akademie-DevSecOpsKurs). Built with Docusaurus and 💚.`,
     },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
@@ -145,7 +156,7 @@ const config: Config = {
         {
           className: 'theme-code-block-highlighted-line',
           line: 'highlight-next-line',
-          block: {start: 'highlight-start', end: 'highlight-end'},
+          block: { start: 'highlight-start', end: 'highlight-end' },
         },
         {
           className: 'code-block-error-line',
@@ -158,13 +169,13 @@ const config: Config = {
 
 
 if (blogEnabled) {
-  (config.themeConfig.navbar as any).items.push({to: '/blog', label: 'Blog', position: 'left'});
+  (config.themeConfig.navbar as any).items.push({ to: '/blog', label: 'Blog', position: 'left' });
   (
     config.themeConfig.footer as any
   ).links[2].items.push({
     to: '/blog',
     label: 'Blog',
   });
-}
+} // test of Pullrequest.g
 
 export default config;
