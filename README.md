@@ -22,9 +22,10 @@ The project paket came from Developer Akademie and I copied it in my own reposit
   $ C:\Users\username\.ssh\id_ed25519
    ```
 you will find two files:
-id_ed25519 ---> private Key
-id_ed25519.pub --> Public-Key
+- id_ed25519 ---> private Key.
+- id_ed25519.pub --> Public-Key.
 It is more important to note that you never give your private-key. The public-key will be used for server or Github.
+
 To show your public-Key, enter this command:
 
 ```
@@ -43,7 +44,7 @@ Open now your Visual studio Code and open the project folder.
 With the command
 
 ```
-§ code .
+$ code .
 ```
 you can start the project.
 
@@ -53,7 +54,7 @@ you can start the project.
  ```
  $ git branch
  ```
-You will see something like :*main. this * shows that you are in actual branch.
+You will see something like :*main. This '*' shows that you are in actual branch.
 Now you need to logout in the main branch and create the feature branch Setup_blog and stay there.
 
 ```
@@ -71,7 +72,8 @@ GitHub
 ├── main
 └── feature/Setup-Blog
 ## Excetution of Modifications
-In the visual studio code we can adapt modifications in our blog
+In the visual studio code we can adapt modifications in our blog.
+
 After modification in our feature branch we use:
 
 ```
@@ -94,16 +96,15 @@ Nun we enter
 ```
 $ git push
 ```
-To push the modifications in Github.
+to push the modifications in Github.
 
 ## creation of Pull-request
 
 Pull request is a demande on the Teams for checking. 
 It connects the main branch and the feature branch.
+
 After execution modifications we can use the button "Compare & Pull request" to create a new Pull request.
 this means saving the modification from feature branch in main. Adding the description of request and clic of creation.
-
-
 
 
 
