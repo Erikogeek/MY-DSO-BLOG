@@ -1,4 +1,4 @@
-# My V-Server Setup
+# My v-server setup
 In this project, we want to set up a virtual Server. A server is a machine which provide many services to other machines. It manages other machines. Hier below, we will give you all steps to configure this virtual server.
 # Setup Guide
 This guide documents the initial setup of an Ubuntu virtual machine which we use hier as server. It  will contains the phase of creation of SSH key authentication, disabling password-based SSH login, installing and configuring Nginx on port `8081`, configuring Git, and connecting the server to GitHub via SSH.
