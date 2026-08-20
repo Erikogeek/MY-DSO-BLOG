@@ -5,12 +5,12 @@ This guide documents the initial setup of an Ubuntu virtual machine which we use
 
 ## Table of Contents
 
-- [1. Creating of SSH Key on the Client]
-- [2. Deposit and Test the Public Key](#2-install-and-test-the-public-key)
+- [1. Creating of SSH Key on the server](#1-creating-of-SSH-Key-on-the-server)
+- [2. Deposit and Test the Public Key](#2-Deposit-and-test-the-public-key)
 - [3. Disable Password-Based SSH Authentication](#3-disable-password-based-ssh-authentication)
 - [4. Install Nginx](#4-install-nginx)
-- [5. Creating own Website using Nginx](#5-create-a-custom-default-site)
-- [6. Configure Nginx using Port 8081](#6-configure-nginx-to-use-port-8081)
+- [5. Creating own Website using Nginx](#5-creating-own-Website-using-Nginx)
+- [6. Configure Nginx using Port 8081](#6-configure-nginx-using-port-8081)
 - [7. Enable and Test the Nginx Site](#7-enable-and-test-the-nginx-site)
 - [8. Configure Git on the Server](#8-configure-git-on-the-server)
 - [9. Connect the Server to GitHub](#9-connect-the-server-to-github)
@@ -117,8 +117,8 @@ $ ssh -o PubkeyAuthentication=no <server-user>@<server-ip>
 
 The connection should fail with a message similar to:
 
-```text
-Permission denied (publickey).
+```
+'Permission denied (publickey).'
 ```
 
 ## 4. Install Nginx
@@ -200,8 +200,8 @@ server {
 
     server_name _;
 
-    root /var/www/default-site;
-    index index.html;
+    root /var/www/alternatives;
+    index alternate-index.html;
 
     location / {
         try_files $uri $uri/ =404;
@@ -263,7 +263,7 @@ $ git config --global --list
 Create a dedicated SSH key pair on the server for GitHub:
 
 ```
-$ ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -C "server-github"
+$ ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -C "your email adresse"
 ```
 
 Display the public key:
@@ -286,7 +286,7 @@ Add the following entry:
 Host github.com
     HostName github.com
     User git
-    IdentityFile ~/.ssh/id_ed25519_github
+    IdentityFile ~/.ssh/id_ed25519
     IdentitiesOnly yes
 ```
 
@@ -295,8 +295,8 @@ Apply restrictive permissions:
 ```bash
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/config
-chmod 600 ~/.ssh/id_ed25519_github
-chmod 644 ~/.ssh/id_ed25519_github.pub
+chmod 600 ~/.ssh/id_ed25519
+chmod 644 ~/.ssh/id_ed25519.pub
 ```
 
 Test GitHub authentication:
@@ -320,8 +320,8 @@ Create a directory for repositories on the server and clone the project:
 ```
 mkdir -p ~/repos
 cd ~/repos
-git clone git@github.com:raawer/v-server-setup.git
-cd v-server-setup
+git clone git@github.com:Erikogeek/V-Server-Setup.git
+cd V-Server-Setup
 ```
 
 Create the documentation branch:
