@@ -22,7 +22,7 @@ The examples use the following values:
 | ----------------- | ----------------------- |
 | Server IP address | `2.28.55.49`          |
 | Nginx port        | `8081`                  |
-| GitHub repository | `Erikogeek/V-Server-Setup` |
+| GitHub repository | `Erikogeek/v-server-setup` |
 
 ## 1. Creating of SSH Key
 
@@ -195,8 +195,8 @@ Add this configuration:
 
 ```
 server {
-    listen 8081 default_server;
-    listen [::]:8081 default_server;
+    listen 8081 ;
+    listen [::]:8081 ;
 
     server_name _;
 
@@ -222,7 +222,7 @@ $ sudo unlink /etc/nginx/sites-enabled/alternatives
 Enable the new site by creating a symbolic link:
 
 ```
-$ sudo ln -s /etc/nginx/sites-available/default-site /etc/nginx/sites-enabled/alternatives
+$ sudo ln -s  /etc/nginx/sites-enabled/alternatives
 ```
 
 Test the Nginx configuration:
@@ -312,7 +312,7 @@ Create a feature branch on the main branch your MY-DSO-BLOG named `V-Server-Setu
 Documentation changes should be made in a dedicated branch. A suitable branch name is:
 
 ```
-docs/V-Server-Setup/README.md
+docs/v-server-setup/README.md
 ```
 
 Create a directory for repositories on the server and clone the project:
@@ -320,14 +320,14 @@ Create a directory for repositories on the server and clone the project:
 ```
 mkdir -p ~/repos
 cd ~/repos
-git clone git@github.com:Erikogeek/V-Server-Setup.git
-cd V-Server-Setup
+git clone git@github.com:Erikogeek/v-server-setup.git
+cd v-server-setup
 ```
 
 Create the documentation branch:
 
 ```
-$ git switch -c docs/V-Server-Setup
+$ git switch -c docs/v-server-setup
 ```
 
 After editing `README.md`, commit and publish the branch:
@@ -335,7 +335,7 @@ After editing `README.md`, commit and publish the branch:
 ```
 git add README.md
 git commit -m "docs: "commit informations"
-git push -u origin docs/V-Server-Setup
+git push -u origin docs/v-server-Setup
 ```
 
 
