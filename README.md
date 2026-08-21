@@ -21,21 +21,25 @@ To do this, I need to creat a SSH-key using this command:
 # 2- to check if the creating of SSH-Key was succes
 
  Enter file in which to save the key
+
    ```
   $ C:\Users\username\.ssh\id_ed25519
     ```
 you will find two files:
 -'id_ed25519' ---> private Key
 - 'id_ed25519.pub' --> Public-Key
-It is more important to note that you never give your private-key. The public-key will be used for server or Github.
+
+It is more important to note that you never give your private-key. 
+The public-key will be used for server or Github.
 To show your public-Key, enter this command:
 
 ```
 $ cat C: /user/username/.ssh/id_ed25519.pub
 ```
+
 After this, the public-key can be set in Github. this will be save by SSH-Key in Github.
 
-# 3 - The project can be save from Github to the local computer and cloned with following command:
+# 3- The project can be save from Github to the local computer and cloned with following command:
 
 ```
 $ git clone git@github.com:Erikogeek/MY-DSO-BLOG.git
@@ -57,7 +61,8 @@ you can start the project.
  $ git branch
  ```
 
-You will see something like :*main. this * shows that you are in actual branch.
+You will see something like :*main. 
+this '*' shows that you are in actual branch.
 Now you need to logout in the main branch and create the 
 feature branch Setup_blog and stay there.
 
@@ -71,6 +76,7 @@ Now is the feature branch created.
 ```
 $ git push -u origin feature/Setup-blog
 ```
+
 The Github sees like this:
 GitHub
 ├── main
@@ -90,6 +96,7 @@ we enter the following command:
 ```
 $ git add <filename>
 ```
+
 and then
 
 ```
@@ -100,31 +107,38 @@ Nun we enter
 ```
 $ git push
 ```
+
 to push the modifications in Github.
 
-## creation of Pull-request
+# creation of Pull-request
 Pull request is a demande on the Teams for checking. 
 It connects the main branch and the feature branch.
-After execution modifications we can use the button "Compare & Pull request" to create a new Pull request.
-this means saving the modification from feature branch in main. 
+After execution modifications we can use the button "Compare & Pull request" 
+to create a new Pull request.
+This means saving the modification from feature branch in main. 
 Adding the description of request and clic of creation.
 
 
 ```
-ssh-keygen -t ed25519 -C "github-v-server"
+$ ssh-keygen -t ed25519 -C "github-v-server"
 ```
 
 ## Repository Structure
 
 The repository is organized as follows:
 
-- `blog/`: Contains markdown files for blog posts. Blog-related metadata is automatically picked up by the Docusaurus configuration.
-- `docs/`: Contains markdown files for documentation. These files are referenced in `sidebars.ts` to define the sidebar structure.
-- `src/`: Contains custom React components, CSS, and JavaScript for additional functionality or theming.
+- `blog/`: Contains markdown files for blog posts. 
+Blog-related metadata is automatically picked up by the Docusaurus configuration.
+- `docs/`: Contains markdown files for documentation. 
+These files are referenced in `sidebars.ts` to define the sidebar structure.
+- `src/`: Contains custom React components, CSS,
+ and JavaScript for additional functionality or theming.
 - `static/`: Stores static assets (e.g., images, icons) served directly without processing.
 - `sidebars.ts`: Configures the structure of sidebars in the documentation section.
-- `docusaurus.config.ts`: Main configuration file for customizing and managing Docusaurus behavior.
-- `build/`: Generated after running the `pnpm build` command. Contains the static website files ready for deployment.
+- `docusaurus.config.ts`: Main configuration file for customizing 
+and managing Docusaurus behavior.
+- `build/`: Generated after running the `pnpm build` command. 
+Contains the static website files ready for deployment.
 
 New content can be added as follows:
 
@@ -147,7 +161,8 @@ To deploy without using SSH, run:
 $ GIT_USER=<Your GitHub username> pnpm deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+If you are using GitHub pages for hosting, this command is a convenient way to build
+ the website and push to the `gh-pages` branch.
 
 ### Deploying using NGINX
 
@@ -158,11 +173,15 @@ To deploy the site using NGINX and Docker, follow this [guide](./docs/guides/dep
 
 # DevSecOps Learning Diary
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator. It documents my learning progress, projects, and work in the field of DevSecOps during my training at Developer Akademie.
+This website is built using [Docusaurus](https://docusaurus.io/),
+ a modern static website generator. It documents my learning progress, projects, 
+ and work in the field of DevSecOps during my training at Developer Akademie.
 
 ## Repository Description
 
-This repository hosts my personal DevSecOps learning diary, blog, and portfolio. It uses Docusaurus to create and manage static documentation and blog content with a custom theme and automated GitHub Pages deployment.
+This repository hosts my personal DevSecOps learning diary, blog, and portfolio.
+ It uses Docusaurus to create and manage static documentation 
+ and blog content with a custom theme and automated GitHub Pages deployment.
 
 ## Table of Contents
 
@@ -194,7 +213,8 @@ This repository hosts my personal DevSecOps learning diary, blog, and portfolio.
    pnpm start
    ```
 
-   This command starts a local development server and opens the website in a browser. Most changes are reflected live without restarting the server.
+   This command starts a local development server and opens the website in a browser. 
+   Most changes are reflected live without restarting the server.
 
 3. Create a production build:
 
@@ -223,7 +243,8 @@ New content can be added as follows:
 
 ## Deployment
 
-The website is automatically deployed to GitHub Pages through a preconfigured GitHub Actions workflow whenever a commit is pushed to the main branch.
+The website is automatically deployed to GitHub Pages through a preconfigured GitHub Actions workflow 
+whenever a commit is pushed to the main branch.
 
 ## Further References
 
