@@ -14,6 +14,7 @@ To do this, I need to creat a SSH-key using this command:
   ```
  ssh-keygen -t ed25519 -C "user_email_adresse"
    ```
+
 - 't' describe the typ of Key
 - 'ed25519' is a modern, secure and compact SSH-Key-typ
 - 'C' add to your key your email.
@@ -25,6 +26,7 @@ To do this, I need to creat a SSH-key using this command:
    ```
   $ C:\Users\username\.ssh\id_ed25519
     ```
+  
 you will find two files:
 -'id_ed25519' ---> private Key
 - 'id_ed25519.pub' --> Public-Key
@@ -44,11 +46,12 @@ After this, the public-key can be set in Github. this will be save by SSH-Key in
 ```
 $ git clone git@github.com:Erikogeek/MY-DSO-BLOG.git
 ```
+
 your keep the same folder name.
 Open now your Visual studio Code and open the project folder.
 With the command
 
-````
+```
 $ code .
 ```
 you can start the project.
@@ -69,9 +72,10 @@ feature branch Setup_blog and stay there.
 ```
 $ git checkout -b feature/Setup-Blog
 ```
+
 Now is the feature branch created.
 
-## Feature branch to Github load
+# Feature branch to Github load
 
 ```
 $ git push -u origin feature/Setup-blog
@@ -111,6 +115,7 @@ $ git push
 to push the modifications in Github.
 
 # creation of Pull-request
+
 Pull request is a demande on the Teams for checking. 
 It connects the main branch and the feature branch.
 After execution modifications we can use the button "Compare & Pull request" 
@@ -169,7 +174,7 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 To deploy the site using NGINX and Docker, follow this [guide](./docs/guides/deploy-docusaurus-with-docker-and-nginx.md)
 
 
-#Newwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+##Newwwwwwwwwwwwwww Documentation
 
 # DevSecOps Learning Diary
 
@@ -230,11 +235,13 @@ The repository is organized as follows:
 
 - `blog/`: Contains Markdown files for blog posts.
 - `docs/`: Contains Markdown and MDX files for documentation and project pages.
-- `src/`: Contains custom React components, CSS, and JavaScript for additional functionality and theming.
+- `src/`: Contains custom React components, CSS, 
+and JavaScript for additional functionality and theming.
 - `static/`: Stores static assets such as images and icons.
 - `sidebars.ts`: Configures the structure of the documentation sidebars.
 - `docusaurus.config.ts`: Contains the main website configuration.
-- `build/`: Generated after running `pnpm build`; contains the static website files ready for deployment.
+- `build/`: Generated after running `pnpm build`; 
+contains the static website files ready for deployment.
 
 New content can be added as follows:
 
