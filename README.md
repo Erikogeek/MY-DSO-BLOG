@@ -129,10 +129,6 @@ After execution modifications we can use the button "Compare & Pull request" to 
 this means saving the modification from feature branch in main. Adding the description of request and clic of creation.
 
 
-
-<<<<<<< HEAD
-=======
-
 ```
 ssh-keygen -t ed25519 -C "github-v-server"
 ```
@@ -161,12 +157,9 @@ ssh-keygen -t ed25519 -C "github-v-server"
 
 1. Installation
 
-=======
-
 1- clone my repository with my local computer. To do this, I need to creat a SSH-key using this command:
   ```
  ssh-keygen -t ed25519 -C "user_email_adresse"
->>>>>>> main
    ```
 - t describe the typ of Key
 - ed25519 is a modern, secure and compact SSH-Key-typ
@@ -271,7 +264,6 @@ Adding the description of request and clic of creation.
 $ ssh-keygen -t ed25519 -C "github-v-server"
 ```
 
->>>>>>> bfeb3f8d3322d50d2810c377da5ff4cf0add5105
 ## Repository Structure
 
 The repository is organized as follows:
