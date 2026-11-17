@@ -209,4 +209,4 @@ The successful login and access to the administration interface demonstrated the
 
 ## Link to video
 
-[Show video](https://www.loom.com/share/b7d2473b80084a7da9c0f6cdb2ffc081)
+[Show video](https://www.loom.com/share/4d4812d6edad4d5288695d63b4bd10a2)
