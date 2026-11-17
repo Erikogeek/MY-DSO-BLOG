@@ -7,6 +7,7 @@
  - [Technical Analysis](#technical-analysis)
  - [Recommended Mitigations](#recommended-mitigations)
  - [Conclusion](#conclusion)
+ - [Link to Video](#link-to-video)
 ## General Information
 
 | Attribute | Description |
@@ -204,3 +205,7 @@ Using Burp Suite Repeater, the original registration request was modified to inc
 The server processed the modified registration request, demonstrating why security-sensitive attributes such as user roles must never be accepted from untrusted client input without proper validation and authorization.
 
 The successful login and access to the administration interface demonstrated the impact of the privilege escalation.
+
+## Link to video
+
+[Show video](https://www.loom.com/share/b7d2473b80084a7da9c0f6cdb2ffc081)
