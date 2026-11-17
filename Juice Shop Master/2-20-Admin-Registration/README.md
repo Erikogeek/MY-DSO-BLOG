@@ -1,4 +1,5 @@
 # OWASP Juice Shop – Challenge 2/20: Admin Registration
+![Problem Statement](Images/Aufgabestellung.png)
 
 ## Table of contents
  - [General Information](#general-information)
