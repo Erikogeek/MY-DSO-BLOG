@@ -7,9 +7,9 @@
 - [1. General Information](#1-general-information)
 - [2. Challenge Objective](#2-challenge-objective)
 - [3. Procedure](#3-procedure)
-- [4. Technical Analysis](#5-technical-analysis)
-- [5. Recommended Security Measures](#6-recommended-security-measures)
-- [6. Conclusion](#7-conclusion)
+- [4. Technical Analysis](#4-technical-analysis)
+- [5. Recommended Security Measures](#5-recommended-security-measures)
+- [6. Conclusion](#6-conclusion)
 - [7. Link to the video](#7-link-to-the-video)
 
 ## 1. General Information
@@ -191,9 +191,9 @@ Afterwards, two HTTP requests were compared using Burp Suite Comparer.
 
 The following differences were identified:
 
-- `Content-Length`
-- `captcha`
-- `comment`
+- `The Content-Length difference resulted from changes in the request body.`
+- `The CAPTCHA value differed because the incorrect value was used in the control test.`
+- `The comment field contained different feedback messages.`
 
 The differences in `Content-Length` and `comment` were expected because the feedback messages were different.
 
@@ -303,4 +303,4 @@ The investigation indicates that the application correctly rejects incorrect CAP
 The main recommended security measure is to invalidate every CAPTCHA solution immediately after successful verification.
 
 ## 7. Link to the video
-[Show video](https://www.loom.com/share/4d4812d6edad4d5288695d63b4bd10a2)
+[Watch the video on Loom](https://www.loom.com/share/4d4812d6edad4d5288695d63b4bd10a2)
