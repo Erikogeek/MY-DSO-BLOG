@@ -26,8 +26,8 @@ apply these techniques to systems you are not authorized to test.
 | # | Challenge | Difficulty | Category | Technique | Documentation | Video |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Admin Registration | ⭐⭐ | Improper Input Validation | Mass Assignment | [Read](./2-20-Admin-Registration/README.md) | [Loom](https://www.loom.com/share/4d4812d6edad4d5288695d63b4bd10a2) |
-| 2 | CAPTCHA Bypass| ⭐⭐⭐ | Broken Anti Automation | Replay Attack | [Read](./4-20-CAPTCHA Bypass/README.md) | [Loom](https://www.loom.com/share/4d4812d6edad4d5288695d63b4bd10a2) |
-| 3 | Login Jim| ⭐⭐⭐ | Injection | SQL Injection | [Read](./3_15-Login Jim/README.md) | [Loom](https://www.loom.com/share/4d4812d6edad4d5288695d63b4bd10a2) |
+| 2 | CAPTCHA Bypass| ⭐⭐⭐ | Broken Anti Automation | Replay Attack | [Read](./4_20-CAPTCHA Bypass/README.md) | [Loom](https://www.loom.com/share/4d4812d6edad4d5288695d63b4bd10a2) |
+| 3 | Login Jim| ⭐⭐⭐ | Injection | SQL Injection | [Read](./3_15-Login-Jim/README.md) | [Loom](https://www.loom.com/share/4d4812d6edad4d5288695d63b4bd10a2) |
 
 ## 2. Quickstart
 
