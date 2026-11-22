@@ -303,4 +303,4 @@ The investigation indicates that the application correctly rejects incorrect CAP
 The main recommended security measure is to invalidate every CAPTCHA solution immediately after successful verification.
 
 ## 7. Link to the video
-[Watch the video on Loom](https://www.loom.com/share/4d4812d6edad4d5288695d63b4bd10a2)
+[Watch the video on Loom](https://www.loom.com/share/6477e64a711e45819162e20f524cf707)

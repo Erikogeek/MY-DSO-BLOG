@@ -248,4 +248,4 @@ This confirmed that the Login Jim challenge was successfully completed.
 The exercise demonstrated the importance of secure SQL query handling, proper input validation and robust authentication mechanisms.
 
 ## 7. Link to the video
-[Watch the Loom Video](https://www.loom.com/share/4d4812d6edad4d5288695d63b4bd10a2)
+[Watch the Loom Video](https://www.loom.com/share/53b0b3eb47344b759b20ea0143372fba)
