@@ -3,7 +3,7 @@
 
 ## Table of contents
  - [1. General Information](#general-information)
- - [2. Objective](#objective)
+ - [2. Challenge Objective](#challenge-objective)
  - [3. Procedure](#procedure)
  - [4. Technical Analysis](#technical-analysis)
  - [5. Recommended Mitigations](#recommended-mitigations)
@@ -23,7 +23,7 @@
 | Affected Endpoint | `POST /api/Users/` |
 | Tools | Kali Linux, Firefox, Burp Suite Proxy and Burp Suite Repeater |
 
-## 2. Objective
+## 2. Challenge Objective
 
 The objective of this challenge is to create a new user account with the email address `kazuto@kirigaya.sao` and assign the same privileges as the administrator account `admin@juice-sh.op`.
 
