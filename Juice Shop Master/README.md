@@ -8,11 +8,12 @@ Every challenge was chosen per difficulty tier (2★, 3★, 3★), each covering
 documented end to end — reconnaissance, exploitation, impact and mitigation —
 with a short video walkthrough.
 
-:::warning This project is strictly educational and research purposes only.
-It was produced for training during a DevSecOps course. All attacks
-were performed against a local OWASP Juice Shop instance in a personal VM. Never
-apply these techniques to systems you are not authorized to test.
-:::
+> [!Warning] 
+>This project is strictly educational and research purposes only.
+>It was produced for training during a DevSecOps course.
+> All attacks were performed against a local OWASP Juice Shop instance in a personal VM.
+> Never apply these techniques to systems you are not authorized to test.
+
 
 ## Table of Contents
 
@@ -83,4 +84,4 @@ This project provided practical experience in web application security testing, 
 
 It demonstrates how common web application vulnerabilities can be identified, exploited and prevented as part of a DevSecOps security approach.
 
-:::Note: All tests were conducted exclusively against a local OWASP Juice Shop instance for educational purposes.:::
+> [!Note]: All tests were conducted exclusively against a local OWASP Juice Shop instance for educational purposes.
