@@ -8,7 +8,7 @@ Every challenge was chosen per difficulty tier (2★, 3★, 3★), each covering
 documented end to end — reconnaissance, exploitation, impact and mitigation —
 with a short video walkthrough.
 
-:::warning This project is strictly only educational and research purposes only.
+:::warning This project is strictly educational and research purposes only.
 It was produced for training during a DevSecOps course. All attacks
 were performed against a local OWASP Juice Shop instance in a personal VM. Never
 apply these techniques to systems you are not authorized to test.
@@ -64,21 +64,23 @@ http://127.0.0.1:3000
 
 ## 3. Security recomandations
 
-The following security measures should be implemented to prevent these vulnerabilities:
-1. Server-Side Validation: Validate all user input, CAPTCHA solutions, and permission-related attributes exclusively on the server side.
+The exercises highlighted the importance of:
+
+1. Server-Side input Validation: Validate all user input, CAPTCHA solutions, and permission-related attributes exclusively on the server side.
 2. Secure Role Management: Assign user roles and permissions exclusively on the server side. Never trust role or permission attributes submitted by clients.
 3. Input Allowlisting: Use an allowlist of permitted registration properties to prevent unauthorized modification of user attributes.
 4. One-Time CAPTCHA Usage: Ensure that each CAPTCHA token is uniquely bound to a user session and challenge and can only be used once.
 5. Authorization Checks: Implement strict authorization checks for administrative functionality and sensitive operations.
 6. Rate Limiting: Limit the number of feedback submissions within a defined time period to prevent automated mass submissions.
 7. Logging and Monitoring: Detect and log unusual submission patterns and suspicious activities.
+8. Parameterized SQL queries and secure authentication.
 
 ## 4. Conclusion
 
-The OWASP Juice Shop challenges **"CAPTCHA Bypass"** and **"Admin Registration"** were successfully completed using Burp Suite Intruder and Repeater.
+All three challenges were successfully completed in a controlled local lab environment.
 
-The tests demonstrated that CAPTCHA solutions could be reused and that modifying registration requests allowed privilege escalation to administrator.
+This project provided practical experience in web application security testing, HTTP request analysis, vulnerability exploitation and security mitigation.
 
-Both challenges highlight the importance of proper server-side validation, secure handling of sensitive user attributes, one-time CAPTCHA usage, and strict authorization checks.
+It demonstrates how common web application vulnerabilities can be identified, exploited and prevented as part of a DevSecOps security approach.
 
-The main lesson is that security-sensitive data and permissions must always be controlled and validated on the server side rather than trusted from client requests.
+:::Note: All tests were conducted exclusively against a local OWASP Juice Shop instance for educational purposes.:::
