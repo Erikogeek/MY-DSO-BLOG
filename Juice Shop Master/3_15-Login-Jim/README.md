@@ -1,25 +1,27 @@
-# OWASP Juice Shop – Challenge 3/15: Login Jim
+# OWASP Juice Shop – Challenge: Login Jim
 ![Problem Statement](./Images/07-Aufgabestellung.png)
 
 ## Table of contents
 - [1. General Information](#general-information)
 - [2. Challenge Objective](#challenge-objective)
 - [3. Procedure](#procedure)
-- [4. Security Impact](#security-impact)
+- [4. Technical Analysis](#technical-analysis)
 - [5. Recommended Mitigations](#recommended-mitigations)
 - [6. Conclusion](#conclusion)
 - [7. Link to the video](#link-to-the-video)
 
 ## 1. General Information
 
-- **Application:** OWASP Juice Shop
-- **Challenge:** Login Jim
-- **Challenge Category:** Injection
-- **Vulnerability:** SQL Injection (SQLi)
-- **Target User:** Jim
-- **Target Email:** `jim@juice-sh.op`
-- **Tools Used:** Kali Linux, Burp Suite Community Edition, SQLmap
-- **HTTP Endpoint:** `POST /rest/user/login`
+| Attribute | Description |
+|---|---|
+| Application | OWASP Juice Shop |
+| Challenge | Login Jim |
+| Security Category | Injection |
+| Attack Technique | SQL Injection to bypass authentication |
+| Security Impact | Unauthorized Account Access |
+| Target | Jim's user account (jim@juice-sh.op) |
+| Affected Endpoint | `POST /api/Users/login` |
+| Tools | Kali Linux, Burp Suite Community Edition, SQLmap |
 
 ## 2. Challenge Objective
 
@@ -200,18 +202,25 @@ On the browser appear that the challenge was successfully resolved.
 
 ![Successful Login](./Images/04-login-succes.png)
 
-## 4. Security Impact
+## 4. Technical Analysis
 
-A successfull SQL Injection attack against an authentication endpoint can have serious consequences:
+The investigation identified an SQL Injection vulnerability in the authentication endpoint.
 
-- Unauthorized access to user accounts.
-- Authentication bypass.
-- Exposure of sensitive user information.
-- Potential access to administrative accounts.
-- Manipulation of database queries.
-- Possible compromise of the application and its data.
+The following technical findings were observed during testing:
 
-In this challenge, the vulnerability allowed authentication as another registered user without knowing the original password.
+1. Initial Authentication Test: The original login request returned HTTP 401 Unauthorized, indicating that the supplied credentials were rejected.
+
+2. SQL Injection Detection: Inserting an apostrophe (') into the email parameter caused an SQLite database error and exposed the underlying SQL query structure.
+
+3. Authentication Bypass: By modifying the email parameter with the SQL comment sequence ('--), the authentication condition was manipulated.
+
+4. Successful Authentication: The modified request returned HTTP 200 OK and a valid JWT authentication token.
+
+5. Target Verification: The response contained the email address jim@juice-sh.op, confirming successful authentication as Jim without knowing his original password.
+
+`Key Technical Finding`:
+
+The vulnerability resulted from unsafe handling of user input in the SQL authentication query. Properly parameterized SQL queries would prevent this type of SQL Injection.
 
 ## 5. Recommended Mitigations
 

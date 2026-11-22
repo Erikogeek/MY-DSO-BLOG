@@ -1,27 +1,29 @@
-# OWASP Juice Shop – Challenge 2/20: Admin Registration
+# OWASP Juice Shop – Challenge: Admin Registration
 ![Problem Statement](Images/Aufgabestellung.png)
 
 ## Table of contents
- - [General Information](#general-information)
- - [Objective](#objective)
- - [Procedure](#procedure)
- - [Technical Analysis](#technical-analysis)
- - [Recommended Mitigations](#recommended-mitigations)
- - [Conclusion](#conclusion)
- - [Link to Video](#link-to-video)
-## General Information
+ - [1. General Information](#general-information)
+ - [2. Objective](#objective)
+ - [3. Procedure](#procedure)
+ - [4. Technical Analysis](#technical-analysis)
+ - [5. Recommended Mitigations](#recommended-mitigations)
+ - [6. Conclusion](#conclusion)
+ - [7. Link to Video](#link-to-video)
+
+## 1. General Information
 
 | Attribute | Description |
 |---|---|
-| Challenge | 2/20 – Admin Registration |
+| Application | OWASP Juice Shop |
+| Challenge | Admin Registration |
 | Security Category | Improper Input Validation |
 | Attack Technique | Mass Assignment |
 | Security Impact | Privilege Escalation |
 | Target | Register a new user with administrator privileges |
 | Affected Endpoint | `POST /api/Users/` |
-| Tools | Kali Linux, OWASP Juice-Shop, Firefox, Burp Suite Proxy and Burp Suite Repeater |
+| Tools | Kali Linux, Firefox, Burp Suite Proxy and Burp Suite Repeater |
 
-## Objective
+## 2. Objective
 
 The objective of this challenge is to create a new user account with the email address `kazuto@kirigaya.sao` and assign the same privileges as the administrator account `admin@juice-sh.op`.
 
@@ -29,7 +31,7 @@ Normally, newly registered users receive the `customer` role.
 
 By manipulating the HTTP registration request, the goal is to make the server accept the `admin` role instead.
 
-## Procedure
+## 3. Procedure
 
 ### Step 1: the Registration
 
@@ -149,7 +151,7 @@ The successful server response was documented using Burp Suite.
 
 **Result:** The modified registration request was successfully processed, and administrator access was verified through the administration interface.
 
-## Technical Analysis
+## 4. Technical Analysis
 
 ### Mass Assignment
 
@@ -187,7 +189,7 @@ The vulnerability may result in:
 - Potential manipulation of user accounts.
 - Possible compromise of the entire application.
 
-## Recommended Mitigations
+## 5. Recommended Mitigations
 
 The following security measures should be implemented:
 
@@ -197,7 +199,7 @@ The following security measures should be implemented:
 4. Implement authorization checks for administrative functionality.
 5. Validate all user input on the server side.
 
-## Conclusion
+## 6. Conclusion
 
 This challenge demonstrates a security vulnerability caused by Mass Assignment.
 
@@ -207,6 +209,6 @@ The server processed the modified registration request, demonstrating why securi
 
 The successful login and access to the administration interface demonstrated the impact of the privilege escalation.
 
-## Link to video
+## 7. Link to video
 
 [Show video](https://www.loom.com/share/4d4812d6edad4d5288695d63b4bd10a2)

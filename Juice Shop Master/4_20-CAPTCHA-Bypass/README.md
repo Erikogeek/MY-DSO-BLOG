@@ -8,23 +8,23 @@
 - [2. Challenge Objective](#2-challenge-objective)
 - [3. Procedure](#3-procedure)
 - [4. Technical Analysis](#4-technical-analysis)
-- [5. Recommended Security Measures](#5-recommended-security-measures)
+- [5. Recommended Mitigations](#5-recommended-mitigations)
 - [6. Conclusion](#6-conclusion)
 - [7. Link to the video](#7-link-to-the-video)
 
 ## 1. General Information
 
-| Property | Description |
+| Attribute | Description |
 |---|---|
 | Application | OWASP Juice Shop |
 | Challenge | CAPTCHA Bypass |
-| Category | CAPTCHA Bypass / Replay Attack |
-| Vulnerability Area | Reuse of a valid CAPTCHA solution |
-| Testing Tool | Burp Suite |
-| Burp Suite Module | Intruder |
-| Target Endpoint | `POST /api/Feedbacks/` |
-| HTTP Method | POST |
-| Result | Successfully solved |
+| Security Category | CAPTCHA Bypass |
+| Attack Technique | Replay Attack (reusing the same valid CAPTCHA data) |
+| Security Impact | CAPTCHA Validation Bypass / Automated Feedback Submission |
+| Target | Feedback submission functionality |
+| Affected Endpoint | `POST /api/Feedbacks/` |
+| Tools | Kali Linux, Firefox, Burp Suite Proxy and Burp Suite Intruder |
+
 
 ## 2. Challenge Objective
 
@@ -254,33 +254,33 @@ As a result, the same CAPTCHA answer can potentially be reused to submit multipl
 
 This makes automated feedback submissions easier and reduces the effectiveness of the CAPTCHA protection.
 
-## 5. Recommended Security Measures
+## 5. Recommended Mitigations
 
 The following security measures should be implemented to prevent this type of vulnerability.
 
-**1. Enforce One-Time CAPTCHA Usage**
+1. Enforce One-Time CAPTCHA Usage
 
 Each valid CAPTCHA solution should only be accepted once.
 
 After successful validation, the corresponding CAPTCHA token must be marked as consumed on the server.
 
-**2. Server-Side CAPTCHA Validation**
+2. Server-Side CAPTCHA Validation
 
 CAPTCHA validation must always be performed on the server.
 
 The application must not rely exclusively on client-side validation or browser-side controls.
 
-**3. Bind CAPTCHA Tokens to Sessions and Challenges**
+3. Bind CAPTCHA Tokens to Sessions and Challenges
 
 Each CAPTCHA solution should be uniquely associated with a specific user session and CAPTCHA challenge.
 
-**4. Implement Rate Limiting**
+4. Implement Rate Limiting
 
 The number of feedback submissions should be limited within a defined time period.
 
 This helps prevent automated mass submissions.
 
-**5. Logging and Monitoring**
+5. Logging and Monitoring
 
 Unusual numbers of feedback submissions within a short period should be detected and logged.
 
