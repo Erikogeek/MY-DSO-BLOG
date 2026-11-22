@@ -208,15 +208,15 @@ The investigation identified an SQL Injection vulnerability in the authenticatio
 
 The following technical findings were observed during testing:
 
-1. Initial Authentication Test: The original login request returned HTTP 401 Unauthorized, indicating that the supplied credentials were rejected.
+1. **Initial Authentication Test**: The original login request returned HTTP 401 Unauthorized, indicating that the supplied credentials were rejected.
 
-2. SQL Injection Detection: Inserting an apostrophe (') into the email parameter caused an SQLite database error and exposed the underlying SQL query structure.
+2. **SQL Injection Detection**: Inserting an apostrophe (') into the email parameter caused an SQLite database error and exposed the underlying SQL query structure.
 
-3. Authentication Bypass: By modifying the email parameter with the SQL comment sequence ('--), the authentication condition was manipulated.
+3. **Authentication Bypass**: By modifying the email parameter with the SQL comment sequence ('--), the authentication condition was manipulated.
 
-4. Successful Authentication: The modified request returned HTTP 200 OK and a valid JWT authentication token.
+4. **Successful Authentication**: The modified request returned HTTP 200 OK and a valid JWT authentication token.
 
-5. Target Verification: The response contained the email address jim@juice-sh.op, confirming successful authentication as Jim without knowing his original password.
+5. **Target Verification**: The response contained the email address jim@juice-sh.op, confirming successful authentication as Jim without knowing his original password.
 
 `Key Technical Finding`:
 

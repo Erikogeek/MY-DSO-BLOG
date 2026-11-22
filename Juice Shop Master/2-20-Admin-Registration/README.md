@@ -193,11 +193,15 @@ The vulnerability may result in:
 
 The following security measures should be implemented:
 
-1. Assign user roles exclusively on the server side.
-2. Never trust permission-related attributes submitted by clients.
-3. Use an allowlist of permitted registration properties.
-4. Implement authorization checks for administrative functionality.
-5. Validate all user input on the server side.
+1. **Assign user roles exclusively on the server side**: The server should automatically assign the default customer role during registration. Users must never be allowed to choose their own roles.
+
+2. **Never trust permission-related attributes submitted by clients**: Sensitive properties such as role, isAdmin or permissions must be ignored or rejected if they are submitted by the client.
+
+3. **Use an allowlist of permitted registration properties**: Only explicitly approved fields, such as email, password and security answer, should be accepted during registration.
+
+4. **Implement authorization checks for administrative functionality**: Every request to an administrative endpoint must be checked on the server to ensure that the authenticated user has the required permissions.
+
+5. **Validate all user input on the server side**: All incoming data must be checked against defined rules and expected data types before being processed or stored.
 
 ## 6. Conclusion
 

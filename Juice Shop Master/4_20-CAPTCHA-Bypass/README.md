@@ -258,31 +258,15 @@ This makes automated feedback submissions easier and reduces the effectiveness o
 
 The following security measures should be implemented to prevent this type of vulnerability.
 
-1. Enforce One-Time CAPTCHA Usage
+1. **Enforce One-Time CAPTCHA Usage**: Each valid CAPTCHA solution should only be accepted once. After successful validation, the corresponding CAPTCHA token must be marked as consumed on the server.
 
-Each valid CAPTCHA solution should only be accepted once.
+2. **Server-Side CAPTCHA Validation**: CAPTCHA validation must always be performed on the server. The application must not rely exclusively on client-side validation or browser-side controls.
 
-After successful validation, the corresponding CAPTCHA token must be marked as consumed on the server.
+3. **Bind CAPTCHA Tokens to Sessions and Challenges**: Each CAPTCHA solution should be uniquely associated with a specific user session and CAPTCHA challenge.
 
-2. Server-Side CAPTCHA Validation
+4. **Implement Rate Limiting**: The number of feedback submissions should be limited within a defined time period. This helps prevent automated mass submissions.
 
-CAPTCHA validation must always be performed on the server.
-
-The application must not rely exclusively on client-side validation or browser-side controls.
-
-3. Bind CAPTCHA Tokens to Sessions and Challenges
-
-Each CAPTCHA solution should be uniquely associated with a specific user session and CAPTCHA challenge.
-
-4. Implement Rate Limiting
-
-The number of feedback submissions should be limited within a defined time period.
-
-This helps prevent automated mass submissions.
-
-5. Logging and Monitoring
-
-Unusual numbers of feedback submissions within a short period should be detected and logged.
+5. **Logging and Monitoring**: Unusual numbers of feedback submissions within a short period should be detected and logged.
 
 ## 6. Conclusion
 
